@@ -114,6 +114,7 @@ nav.scrolled {
 .mobile-menu.open a:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.18s; }
 .mobile-menu.open a:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.26s; }
 .mobile-menu.open a:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.34s; }
+.mobile-menu.open a:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.42s; }
 .mobile-menu a:hover { color: var(--color-accent); }
 
 /* ---- RESPONSIVE ---- */
