@@ -2,8 +2,8 @@
    countdown.js — カウントダウンのスロットリールアニメーション
    ================================================================ */
 (function() {
-  // ★最終日（この日が0になる）
-  const TARGET_DATE = new Date('2026-05-02T00:00:00+09:00');
+  // ★イベント開始日（この日から0日表示になる）
+  const TARGET_DATE = new Date('2026-05-01T00:00:00+09:00');
 
   const wrap     = document.getElementById('counterWrap');
   const labelEl  = document.getElementById('counterLabel');
