@@ -2,9 +2,14 @@
    countdown.js — カウントダウンのスロットリールアニメーション
    ================================================================ */
 (function() {
-  // ★イベント開始日（この日から0日表示になる）
-  const TARGET_DATE = new Date('2027-05-01T00:00:00+09:00');
   const START_COUNTDOWN_DAYS = 365;
+
+  function getTodayJST() {
+    const jst = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
+    return new Date(jst.getFullYear(), jst.getMonth(), jst.getDate());
+  }
+
+  const TARGET_DATE = new Date(getTodayJST().getTime() + START_COUNTDOWN_DAYS * 86400000);
 
   const wrap     = document.getElementById('counterWrap');
   const labelEl  = document.getElementById('counterLabel');
