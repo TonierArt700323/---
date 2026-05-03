@@ -3,7 +3,8 @@
    ================================================================ */
 (function() {
   // ★イベント開始日（この日から0日表示になる）
-  const TARGET_DATE = new Date('2026-05-01T00:00:00+09:00');
+  const TARGET_DATE = new Date('2027-05-01T00:00:00+09:00');
+  const START_COUNTDOWN_DAYS = 365;
 
   const wrap     = document.getElementById('counterWrap');
   const labelEl  = document.getElementById('counterLabel');
@@ -93,9 +94,11 @@
     });
   }
 
-  const days = daysLeft();
+  let days = daysLeft();
+  if (days > START_COUNTDOWN_DAYS) days = START_COUNTDOWN_DAYS;
+
   const targetDigits = toDigits(days);
-  const startDigits  = toDigits(365, targetDigits.length);
+  const startDigits  = toDigits(START_COUNTDOWN_DAYS, targetDigits.length);
 
   buildSlots(startDigits.length);
 
